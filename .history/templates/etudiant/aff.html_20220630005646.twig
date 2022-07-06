@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h1>HTML Table</h1>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>nom</th>
+    <th>prenom</th>
+    <th>classe</th>
+    <th>action</th>
+  </tr>
+{% for etude in etudiants %}
+
+
+  <tr>
+    <td>{{etude.id}}</td>
+    <td>{{etude.nom}}</td>
+    <td>{{etude.prenom}}</td>
+    <td>{{etude.classe}}</td>
+    <td>supprimer , editer</td>
+  </tr>
+  {% endfor %}
+  <tr>
+    <td>Total :  </td>
+
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+
